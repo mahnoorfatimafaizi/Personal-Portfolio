@@ -106,7 +106,7 @@ const Projects = () => {
           <ProjectCard
             image="/images/ai&finance.png"
             title="Project: AI & Finance"
-            description="AI & Finance is a sample project built with Next.js, TypeScript, and custom CSS. It features a responsive design and pixel-perfect layouts. This project showcases Mahnoor's skill in creating modern, user-friendly websites."
+            description="AI & Finance is a sample project built with Next.js, TypeScript, and custom CSS. It features a responsive design and pixel-perfect layouts. This project showcases my skills in creating modern, user-friendly websites."
             techStack={["Next.js", "React", "Custom CSS"]}
             githubLink="https://github.com/mahnoorfatimafaizi/Milestone2-Basic-UI-Design-with-Custom-CSS.git"
             vercelLink="https://aiandfinance.vercel.app/"
