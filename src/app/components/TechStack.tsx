@@ -39,62 +39,42 @@ const TechStack: React.FC = () => {
         <FaHtml5
           size={95}
           className="text-orange-500 hover:bg-orange-200 hover:scale-110 transition-all duration-300 ease-in-out p-3 rounded-full"
-          data-aos="fade-right"
-          data-aos-delay="100"
         />
         <FaCss3Alt
           size={95}
           className="text-blue-600 hover:bg-blue-200 hover:scale-110 transition-all duration-300 ease-in-out p-3 rounded-full"
-          data-aos="fade-right"
-          data-aos-delay="200"
         />
         <FaJsSquare
           size={95}
           className="text-yellow-500 hover:bg-yellow-200 hover:scale-110 transition-all duration-300 ease-in-out p-3 rounded-full"
-          data-aos="fade-right"
-          data-aos-delay="300"
         />
         <FaReact
           size={95}
           className="text-blue-400 hover:bg-blue-200 hover:scale-110 transition-all duration-300 ease-in-out p-3 rounded-full"
-          data-aos="fade-right"
-          data-aos-delay="400"
         />
         <SiNextdotjs
           size={95}
           className="text-black hover:bg-black hover:scale-110 transition-all duration-300 ease-in-out p-3 rounded-full"
-          data-aos="fade-left"
-          data-aos-delay="100"
         />
         <SiTailwindcss
           size={95}
           className="text-teal-400 hover:bg-teal-200 hover:scale-110 transition-all duration-300 ease-in-out p-3 rounded-full"
-          data-aos="fade-left"
-          data-aos-delay="200"
         />
         <SiTypescript
           size={95}
           className="text-blue-600 hover:bg-blue-200 hover:scale-110 transition-all duration-300 ease-in-out p-3 rounded-full"
-          data-aos="fade-left"
-          data-aos-delay="300"
         />
         <FaGitAlt
           size={95}
           className="text-red-500 hover:bg-red-200 hover:scale-110 transition-all duration-300 ease-in-out p-3 rounded-full"
-          data-aos="fade-left"
-          data-aos-delay="400"
         />
         <FaGithub
           size={95}
           className="text-gray-800 hover:bg-gray-200 hover:scale-110 transition-all duration-300 ease-in-out p-3 rounded-full"
-          data-aos="fade-up"
-          data-aos-delay="100"
         />
         <SiVisualstudiocode
           size={95}
           className="text-blue-500 hover:bg-blue-200 hover:scale-110 transition-all duration-300 ease-in-out p-3 rounded-full"
-          data-aos="fade-up"
-          data-aos-delay="200"
         />
          <Image 
       src="/images/pythonIcon.webp" 
@@ -102,8 +82,6 @@ const TechStack: React.FC = () => {
      width={95} 
      height={95} 
      className="text-yellow-500 hover:bg-yellow-200 hover:scale-110 transition-all duration-300 ease-in-out p-3 rounded-full"
-          data-aos="fade-right"
-          data-aos-delay="300"
   />
       </div>
     </section>
