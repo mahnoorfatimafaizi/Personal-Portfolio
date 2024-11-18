@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import { useInView } from "react-intersection-observer";
+import React, { useEffect, useState } from "react";
 
 interface ProjectProps {
   image: string;
@@ -20,13 +19,8 @@ const ProjectCard: React.FC<ProjectProps> = ({
   githubLink,
   vercelLink,
 }) => {
-  const [showDetails, setShowDetails] = useState(false);
-
   return (
-    <div
-      className="flex flex-col md:flex-row items-center justify-between bg-white shadow-lg rounded-lg p-6 space-x-6 bg-opacity-90 
-        hover:shadow-2xl hover:scale-105 transition-transform duration-300"
-    >
+    <div className="flex flex-col md:flex-row items-center justify-between bg-white shadow-lg rounded-lg p-6 space-x-6 bg-opacity-90 ">
       <div className="flex-shrink-0 w-full md:w-1/3 mb-6 md:mb-0">
         <img
           src={image}
@@ -50,13 +44,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
           ))}
         </div>
 
-        {showDetails && (
-          <div className="text-gray-500 text-sm mb-4">
-            Tools used: {techStack.join(", ")}
-          </div>
-        )}
-
-        <div className="flex space-x-4 items-center">
+        <div className="flex space-x-4">
           <a
             href={githubLink}
             target="_blank"
@@ -73,12 +61,6 @@ const ProjectCard: React.FC<ProjectProps> = ({
           >
             Preview
           </a>
-          <button
-            onClick={() => setShowDetails(!showDetails)}
-            className="text-teal-500 font-medium hover:underline focus:outline-none"
-          >
-            {showDetails ? "Hide Details" : "Read More"}
-          </button>
         </div>
       </div>
     </div>
@@ -86,30 +68,26 @@ const ProjectCard: React.FC<ProjectProps> = ({
 };
 
 const Projects = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.2, // Trigger when 20% of the element is visible
-    triggerOnce: true, // Only trigger the animation once
-  });
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <section className="py-16 bg-background text-foreground relative font-serif">
       <div className="absolute inset-0 bg-white bg-opacity-20"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <h2
-          className={`text-3xl font-bold text-center mb-12 text-white transition-opacity duration-700 ease-out ${
-            inView ? "opacity-100" : "opacity-0"
-          }`}
-          ref={ref}
-        >
+        <h2 className="text-3xl font-bold text-center mb-12 text-white">
           My Projects
         </h2>
 
-        <div
-          className={`space-y-12 transition-transform duration-700 ease-out ${
-            inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
+        <div className="space-y-12">
           <ProjectCard
             image="/images/recipe_website.png"
             title="Project: Cookieen (Recipe Website)"
@@ -138,7 +116,7 @@ const Projects = () => {
         <div className="flex justify-center mt-6">
           <a
             href="/projects"
-            className="px-6 py-3 bg-[#065a60] text-white text-bold font-bold rounded-md shadow-md hover:bg-gray-700 hover:shadow-lg hover:scale-105 hover:ring-2 hover:ring-[#32e1e6] active:scale-95 transition-transform duration-300 ease-in-out"
+            className="px-6 py-3 bg-[#065a60] text-white text-bold font-bold rounded-md shadow-md hover:bg-gray-700 hover:shadow-lg transition-all duration-300"
           >
             See more projects
           </a>

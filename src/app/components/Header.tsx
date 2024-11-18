@@ -1,27 +1,18 @@
 "use client";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header
-      className={`relative flex justify-between items-center px-8 py-4 bg-[#000000] max-w-screen-2xl mx-auto z-10 font-serif transform ${
-        isLoaded ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
-      } transition-all duration-500 ease-out`}
-    >
+    <header className="relative flex justify-between items-center px-8 py-4 bg-[#000000] max-w-screen-2xl mx-auto z-10 font-serif">
       <div className="md:hidden flex items-center text-gray-600">
         <button onClick={toggleMenu}>
           {isMenuOpen ? <HiX size={30} /> : <HiMenuAlt4 size={30} />}
