@@ -15,8 +15,64 @@
 .text-typing {
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid black; /* Blinking cursor */
+  border-right: 2px solid black; 
   animation: typing 4s steps(30, end) infinite, blink 0.5s step-end infinite;
+} 
+
+/* Typewriter effect for the tagline */
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
+
+
+
+/* Fade-in effect for name and title */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 2s ease-in forwards;
+}
+
+/* Slide-in effect for the footer */
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideInUp {
+  animation: slideInUp 1s ease-out forwards;
+}
+
+/* Hover effect for social media icons */
+.hover\:scale-110:hover {
+  transform: scale(1.1);
+}
+
+.hover\:rotate-12:hover {
+  transform: rotate(12deg);
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
 
 
