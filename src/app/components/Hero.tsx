@@ -27,18 +27,6 @@ const Hero = () => {
         </p>
 
         <div className="flex justify-center lg:justify-start space-x-6 mt-6">
-          {/* <a
-            href="/about"
-            className="px-6 py-3 bg-[#065a60] text-white text-lg font-bold rounded-md shadow-md hover:bg-gray-700 hover:shadow-lg transition-all duration-300 ease-in-out"
-          >
-            About
-          </a>
-          <a
-            href="/contact"
-            className="px-6 py-3 bg-[#065a60] text-white text-lg font-bold rounded-md shadow-md hover:bg-gray-700 hover:shadow-lg transition-all duration-300 ease-in-out"
-          >
-            Contact
-          </a> */}
           <a
   href="/about"
   className="px-6 py-3 bg-[#065a60] text-white text-lg font-bold rounded-md shadow-md hover:bg-gray-700 hover:shadow-lg hover:scale-105 hover:ring-2 hover:ring-[#32e1e6] active:scale-95 transition-transform duration-300 ease-in-out"

@@ -116,7 +116,7 @@ const Projects = () => {
         <div className="flex justify-center mt-6">
           <a
             href="/projects"
-            className="px-6 py-3 bg-[#065a60] text-white text-bold font-bold rounded-md shadow-md hover:bg-gray-700 hover:shadow-lg transition-all duration-300"
+            className="px-6 py-3 bg-[#065a60] text-white text-bold font-bold rounded-md shadow-md hover:bg-gray-700 hover:shadow-lg hover:scale-105 hover:ring-2 hover:ring-[#32e1e6] active:scale-95 transition-transform duration-300 ease-in-out"
           >
             See more projects
           </a>
@@ -127,6 +127,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-
-
